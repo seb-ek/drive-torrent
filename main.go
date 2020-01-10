@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	port := "3000";
+	port := os.Getenv("Port");
 
 	s := server.Server{
 		Port:       port,
