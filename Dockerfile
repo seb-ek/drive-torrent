@@ -5,9 +5,8 @@ WORKDIR $GOPATH/src/github.com/ppkavinda/drive-torrent
 COPY . .
 
 
-RUN go get -d -v ./...
-RUN go install -v ./...
-
+RUN chmod +x ./main
 EXPOSE 3000
+CMD ./main
 
-CMD ["go","run","main.go"]
+
